@@ -307,6 +307,7 @@ def create_account():
 
     return username, encrypted_password, stats, learned_words
 
+
 def login():
     """Log an existing user into their account."""
 
@@ -364,9 +365,8 @@ def learn_beginner(dictionary, learned_words, count, stats):
 
         # Displaying the flashcard
         print("\n------------------------------------------------")
-        print(
-            f"{'FLASHCARD ' + str(index + 1) + '/' + str(count):^{FLASHCARD_WIDTH}}"
-        )
+        flashcard_title = f"FLASHCARD {index + 1}/{count}"
+        print(f"{flashcard_title:^{FLASHCARD_WIDTH}}")
         print()
         print(f"{word:^{FLASHCARD_WIDTH}}")
         print()
@@ -426,9 +426,8 @@ def learn_intermediate(
 
         # Displaying the flashcard
         print("\n--------------------------------")
-        print(
-            f"{'FLASHCARD ' + str(index + 1) + '/' + str(count):^{FLASHCARD_WIDTH}}"
-        )
+        flashcard_title = f"FLASHCARD {index + 1}/{count}"
+        print(f"{flashcard_title:^{FLASHCARD_WIDTH}}")
         print()
         print(f"{phrase:^{FLASHCARD_WIDTH}}")
         print()
